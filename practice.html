@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            /* background-color: #CEE6F3; */
+        }
+        .logo-img{
+            max-width: 100%;
+            width: 100px;
+            height: auto;
+            margin: 20px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .menu-list{
+            display: flex;
+            
+        }
+        .menu-list li{
+            list-style: none;
+            margin: 20px;
+        }
+        .menu-list li a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #003049;
+            font-weight: 600;
+            cursor: pointer;
+            transition: font-size 0.5s ease;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .menu-list li a::after{
+            content: "";
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: #BA704F;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .menu-list li a:hover::after{
+            transform: scaleX(1);
+        }
+        .menu-list li a:hover{
+            color: #BA704F;
+        }
+        .container{
+            background-color: red;
+        }
+        .container{
+    height: auto;
+}
+.section{
+    justify-content: center;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    /* padding: 20px; */
+}
+.section img{
+    height: auto;
+    width: 350px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.typing-text{
+    margin-top: 120px;
+    /* margin-left: 0px; */
+    padding-left: 100px
+}
+.typing-text h1{
+    font-size: 50px;
+}
+/* section one typing text */
+
+.typing-text .text{
+    position: relative;
+    color: #003049;
+    font-size: 30px;
+    font-weight: 600;
+}
+.typing-text .text.first-text{
+    color:#BA704F;
+}
+.text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #CEE6F3;
+    border-left: 2px solid #003049;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.shop-now{
+    width: 12rem;
+    height: 3rem;
+    border-radius: 30rem;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    /* overflow: hidden; */
+    z-index: 1;
+    margin-top: 20px;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #c5c5c5;
+}
+.shop-now::before{
+    content: '';
+    width: 0;
+    height: 3rem;
+    border-radius: 30rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+.shop-now:hover::before{
+    width: 12rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+         <a href="#"><img class="logo-img" src="images/logo.png" alt=""></a>
+            <ul class="menu-list">
+                <li class="list-item"><a class="active" href="#">Home</a></li>
+                <li class="list-item"><a href="#">Shop</a></li>
+                <li class="list-item"><a href="#">About</a></li>
+                <li class="list-item"><a href="#">Cart</a></li>
+                <li class="list-item"><a href="#">User</a></li>
+            </ul>
+           <buttonn class="call-btn"><i class="call fa fa-phone" aria-hidden="true"></i></buttonn>
+    </header>
+
+    <div class="container">
+        <div class="section typing-text">
+            <h1>
+                Welcome to Kitabi Seher
+            </h1>
+            <span class="text first-text">Here Discover :</span>
+            <span class="text sec-text"></span> <br>
+            <button class="shop-now">
+                Shop Now
+            </button>
+        </div>
+        <div class="section">
+            <img src="images/section-img.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

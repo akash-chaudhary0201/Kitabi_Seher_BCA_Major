@@ -1,0 +1,148 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true){
+    header("location: login.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart <span class="counter">()</span> </a></li>
+                
+            </ul>
+            <a href="#" class="call-btn">
+                <i class="call fa fa-phone" aria-hidden="true"></i>
+            </a>
+        </nav>
+        <div class="content">
+                <div class="content-body">
+                    <div class="head-body">
+                        <h1>
+                            Welcome To  Kitabi Seher
+                        </h1>
+                        <span class="text first-text">Discover :</span>
+                        <span class="text sec-text"></span> <br>
+                        <button class="shop-btn">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div class="content-body">
+                    <img src="images/section-img.png" alt="">
+                </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h1>
+            About Us
+        </h1>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">Who are we? <i class="fa-sharp fa-solid fa-caret-down"></i></div>
+                <div class="accordion-content">
+                    <p>KITABI SEHER is an ecommerce platform that specializes in selling second hand books to underprivileged children. Our mission is to make books accessible to every child regardless of their socio-economic background. <br>We believe that every child has the right to education and that books are an essential tool for learning and personal growth.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">What is Our Mission And Vision? <i class="fa-sharp fa-solid fa-caret-down"></i></div>
+                <div class="accordion-content">
+                    <p>Our vision is to create a world where every child has access to the knowledge and inspiration found in books. We strive to be a platform that provides a wide range of affordable, high-quality second-hand books for children of all ages. <br>We work closely with our partners, volunteers, and donors to ensure that our books are in good condition and are appropriate for our target audience.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">Our Team <i class="fa-sharp fa-solid fa-caret-down"></i></div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            Akash Chaudhary 
+                        </li>
+                        <li>
+                            Naveen Tripathi 
+                        </li>
+                        <li>
+                            Aashu Kumar 
+                        </li>
+                        <li>
+                            Keshav 
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- subscribe and footer -->
+
+    <footer>
+        <div class="subscribe">
+            <div class="subs-head">
+                <h1>
+                    Subscribe Us
+                </h1>
+                <h3>
+                    To get best Offers 🎆
+                </h3>
+            </div>
+            <div class="subs-entry">
+                <input type="email" class="email" name="email" placeholder="Enter your email" required>
+                <input class="sbmt-btn" type="submit" value="Submit">
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="foot-logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="socials">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <h4>
+            &copy; All Copyright Reserved To Kitabi Seher
+        </h4>
+    </div>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

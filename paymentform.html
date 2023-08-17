@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="order-form-container">
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="email">Name of Book</label>
+            <input type="text" class="book" name="book" required>
+
+            <button type="submit" id="submit-button">Place Order</button>
+        </form>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const headingContent = urlParams.get("heading");
+
+            const bookInput = document.querySelector(".book");
+            bookInput.value = headingContent || ''; 
+        });
+        </script>
+</body>
+</html>
